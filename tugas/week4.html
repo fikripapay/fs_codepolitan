@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="description"
+      content="Weekly Mini Event KelasFullstack Minggu ke-4 (Horizontal Timeline)"
+    />
+    <meta name="robots" content="index,follow" />
+    <link
+      rel="canonical"
+      href="https://lyandiff.github.io/Weekly-Mini-Event-KelasFullstack-Ka-Levi/week4.html"
+    />
+    <meta
+      property="og:title"
+      content="Week 4 Horizontal Timeline (Weekly Mini Event kak Levi KelasFullstack.id)"
+    />
+    <meta property="og:locale" content="id_ID" />
+    <meta
+      property="og:description"
+      content="Weekly Mini Event KelasFullstack Minggu ke-4 (Horizontal Timeline)"
+    />
+    <meta
+      property="og:image"
+      content="https://i.ibb.co/60g0LnH/week4preview1.png"
+    />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Week 4 Horizontal Timeline" />
+    <meta property="og:image:type" content="image/png" />
+    <meta
+      property="og:url"
+      content="https://lyandiff.github.io/Weekly-Mini-Event-KelasFullstack-Ka-Levi/week4.html"
+    />
+    <meta
+      property="og:site_name"
+      content="Week 4 Horizontal Timeline (Weekly Mini Event kak Levi KelasFullstack.id)"
+    />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="format-detection" content="telephone=yes" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1"
+      user-scalable="no"
+    />
+    <title>
+      Week 4 Horizontal Timeline (Weekly Mini Event kak Levi KelasFullstack.id)
+    </title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+  </head>
+  <body>
+    <div id="scroll-wrapper"></div>
+    <main id="wrapper">
+      <div class="container">
+        <h1>Sejarah JavaScript</h1>
+        <div class="timeline">
+          <div class="timeline-pointer"></div>
+        </div>
+        <div class="history-card bottom">
+          <h1>1995</h1>
+          <p>pertama kali dibuat oleh Brendan Eich</p>
+        </div>
+      </div>
+      <div class="container">
+        <div class="history-card top">
+          <h1>1997</h1>
+          <p>distandarisasi oleh ECMA dan ECMAscript 1 Rilis</p>
+        </div>
+        <div class="timeline">
+          <div class="timeline-pointer"></div>
+          <div class="timeline-pointer"></div>
+        </div>
+        <div class="history-card bottom">
+          <h1>1998 - 1999</h1>
+          <p>ECMAscript 2 dan 3 Rilis</p>
+        </div>
+      </div>
+      <div class="container">
+        <div class="history-card top">
+          <h1>2008</h1>
+          <p>ECMAscript 4 diajukan namun tidak pernah rilis</p>
+        </div>
+        <div class="timeline">
+          <div class="timeline-pointer"></div>
+          <div class="timeline-pointer"></div>
+        </div>
+        <div class="history-card bottom">
+          <h1>2009</h1>
+          <p>ECMAscript 5 rilis</p>
+        </div>
+      </div>
+      <div class="container">
+        <h1>dan masih terus berlanjut . . .</h1>
+        <div class="timeline">
+          <div class="timeline-pointer"></div>
+        </div>
+        <div class="history-card bottom">
+          <h1>2015</h1>
+          <p>ECMAscript 6 rilis</p>
+        </div>
+      </div>
+    </main>
+    <script>
+      let scrollWrapper = document.getElementById("scroll-wrapper");
+      let wrapper = document.getElementById("wrapper");
+      for (let i = 0; i < wrapper.children.length; i++) {
+        const div = document.createElement("div");
+        scrollWrapper.appendChild(div);
+      }
+      scrollWrapper.onscroll = () => {
+        wrapper.style.left =
+          "-" +
+          (scrollWrapper.scrollTop /
+            (scrollWrapper.scrollHeight - scrollWrapper.clientTop)) *
+            wrapper.clientWidth +
+          "px";
+      };
+    </script>
+  </body>
+</html>
