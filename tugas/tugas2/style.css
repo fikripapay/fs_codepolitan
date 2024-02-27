@@ -9,21 +9,8 @@
   position: relative;
   max-height: 100vh;
   scroll-snap-type: x mandatory;
-  overflow-x: hidden;
+  overflow-x: scroll;
   overflow-y: hidden;
-}
-
-.container::before {
-  content: "";
-  position: absolute;
-  height: 4px;
-  width: 200vw;
-  top: 50%;
-  left: 50%;
-  right: 50%;
-  transform: translateY(-50%);
-  background-color: #ccc;
-  z-index: 999;
 }
 
 section {
@@ -55,7 +42,30 @@ section::after {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  z-index: 9999;
+}
+
+.start-timeline,
+.center-timeline,
+.end-timeline {
+  position: absolute;
+  height: 4px;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #ccc;
+}
+
+.start-timeline {
+  width: 50%;
+  right: 0;
+}
+
+.center-timeline {
+  width: 100%;
+}
+
+.end-timeline {
+  width: 50%;
+  left: 0;
 }
 
 .description {
@@ -82,9 +92,9 @@ section::after {
 
 .container > section:first-child .description,
 .container > section:last-child .description {
-  top: 54%;
+  bottom: 15%;
 }
 
 .container > section:nth-child(2) .description {
-  top: 20%;
+  top: 15%;
 }
