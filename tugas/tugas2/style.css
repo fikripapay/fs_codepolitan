@@ -4,31 +4,73 @@
   box-sizing: border-box;
 }
 
-body {
+.container {
   display: flex;
   justify-content: center;
   align-items: center;
+  min-width: 100vw;
   min-height: 100vh;
   background-color: #0a0a0a;
-  color: #fff;
+  color: #000;
 }
 
-.container {
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   width: 50%;
-  height: 50%;
   padding: 20px;
-  /* padding: ; */
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 2px 2px 2px #fff;
   background-color: #999;
 }
 
-.profil {
-  width: 120px;
-  height: 120px;
-  /* border-radius: 50%; */
+img {
+  width: 150px;
+  height: 150px;
+  margin-bottom: 10px;
+  border-radius: 50%;
+  object-position: center;
+  box-shadow: 0 0 10px salmon;
 }
 
-.profil img {
-  width: 100%;
-  border-radius: 50%;
-  overflow: hidden;
+.name h1 {
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
+
+.description {
+  margin-bottom: 10px;
+}
+
+.socmed {
+  padding: 10px;
+  background-color: #999;
+  border: 2px solid salmon;
+  border-radius: 10px;
+}
+
+.socmed h2 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.links a {
+  font-size: 2rem;
+  text-decoration: none;
+  margin-right: 5px;
+  color: #000;
+}
+
+.links a:hover {
+  color: lightgreen;
+}
+
+/* Responsive */
+
+@media screen and (max-width: 768px) {
+  .content {
+    width: 70%;
+  }
 }
