@@ -1,0 +1,93 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+}
+
+.gallery-view {
+  width: 100%;
+  height: 100%;
+  padding: 50px 20px;
+}
+
+.gallery-view h1 {
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.gallery-view-container {
+  display: grid;
+}
+
+.list-gallery-view {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  width: 200px;
+  height: 200px;
+  background-image: url(https://cdn.pixabay.com/photo/2018/08/14/13/23/ocean-3605547_640.jpg);
+  background-position: center;
+  background-size: cover;
+  border: 1px solid #999;
+  box-shadow: 1px 1px 5px #999;
+  cursor: pointer;
+}
+
+.list-gallery-view .description {
+  width: 100%;
+  padding: 10px;
+  text-align: center;
+  background-color: #fff;
+  border-radius: 20px 0 0 0;
+}
+
+.gallery-preview {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(235, 219, 228, 0.8);
+  display: none;
+}
+
+.list-gallery-preview {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  width: 50%;
+  height: 50%;
+  background-image: url(https://cdn.pixabay.com/photo/2018/08/14/13/23/ocean-3605547_640.jpg);
+  background-position: center;
+  background-size: cover;
+  border: 1px solid #999;
+  box-shadow: 1px 1px 5px #999;
+  cursor: pointer;
+}
+
+.list-gallery-preview .description {
+  width: 100%;
+  padding: 10px;
+  text-align: center;
+  background-color: #fff;
+  border-radius: 20px 0 0 0;
+}
+
+.list-gallery-preview .description h2 {
+  margin-bottom: 10px;
+}
+
+.list-gallery-preview .description i {
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: white;
+}
