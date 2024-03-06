@@ -1,12 +1,32 @@
-const galleryView = document.querySelectorAll(".gallery-view")[0];
-const galleryPreview = document.querySelectorAll(".gallery-preview")[0];
-const listGalleryPreview = document.querySelector(".list-gallery-preview");
-const close = document.querySelector("#close");
+const listGalleryView = document.querySelectorAll(".list-gallery-view");
+const galleryPreview = document.querySelector(".gallery-preview");
+const listGalleryPreview = document.querySelectorAll(".list-gallery-preview");
+const closeBtn = document.querySelectorAll("#close");
 
-galleryView.addEventListener("click", () => {
-  galleryPreview.style.display = "block";
-});
+function showGalleryPreview() {
+  listGalleryView.forEach((view, index) => {
+    view.addEventListener("click", () => {
+      galleryPreview.style.display = "block";
+      listGalleryPreview[index].style.display = "block";
+    });
+  });
+}
 
-close.addEventListener("click", () => {
+function hideGalleryPreview() {
   galleryPreview.style.display = "none";
+  listGalleryPreview.forEach((preview) => {
+    preview.style.display = "none";
+  });
+}
+
+closeBtn.forEach((button) => {
+  button.addEventListener("click", hideGalleryPreview);
 });
+
+document.addEventListener("click", (e) => {
+  if (e.target.className === "gallery-preview") {
+    hideGalleryPreview();
+  }
+});
+
+showGalleryPreview();
