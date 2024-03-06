@@ -1,0 +1,68 @@
+:root {
+  --primary: #ffa500;
+  --secondary: #1c2024;
+  --light: #fff1d9;
+  --grey: #23262a;
+}
+
+body {
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+.bg-secondary {
+  background-color: var(--secondary) !important;
+}
+
+.bg-yellow {
+  background-color: var(--primary);
+}
+
+.bg-light {
+  background-color: var(--light);
+}
+
+/* button*/
+#btn-dark {
+  font-weight: 600;
+  background-color: var(--secondary);
+}
+
+#btn-light {
+  font-weight: 600;
+  background-color: inherit;
+}
+
+#btn-dark:hover {
+  background-color: var(--primary) !important;
+  color: var(--secondary) !important;
+}
+
+#btn-light:hover {
+  color: var(--primary);
+  background-color: inherit;
+}
+
+/* hero section */
+section.hero h1 {
+  font-size: 4rem;
+  font-family: "Montagu Slab", serif;
+  font-weight: 600;
+}
+
+section.hero span.creative {
+  position: relative;
+}
+
+section.hero span.creative::before {
+  content: "";
+  position: absolute;
+  bottom: 10px;
+  height: 12px;
+  width: 300px;
+  background-color: var(--primary);
+  z-index: 2;
+}
+
+section.hero p {
+  color: #878787;
+}
