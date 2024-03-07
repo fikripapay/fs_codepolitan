@@ -3,6 +3,8 @@
   --secondary: #1c2024;
   --light: #fff1d9;
   --grey: #23262a;
+
+  --montagu: "Montagu Slab", serif;
 }
 
 body {
@@ -49,7 +51,7 @@ section.hero {
 
 section.hero h1 {
   font-size: 4rem;
-  font-family: "Montagu Slab", serif;
+  font-family: var(--montagu);
   font-weight: 600;
 }
 
@@ -72,4 +74,54 @@ section.hero span.reality::before {
 
 section.hero p {
   color: #878787;
+}
+
+/* stat section */
+section.stat {
+  height: 255px;
+  background-color: var(--secondary);
+}
+
+section.stat h2 {
+  font-family: var(--montagu);
+  font-size: 48px;
+}
+
+/* facility section */
+section.facility .title h3 {
+  font-family: var(--montagu);
+  font-size: 36px;
+}
+
+section.facility .title span {
+  position: relative;
+  z-index: 1;
+}
+
+section.facility .title span::before {
+  content: "";
+  position: absolute;
+  bottom: 10px;
+  height: 10px;
+  width: 100%;
+  background-color: var(--primary);
+  z-index: -1;
+}
+
+section.facility .checklist {
+  display: flex;
+  align-items: center;
+}
+
+section.facility .checklist i {
+  font-size: 1.5rem;
+  color: var(--primary);
+}
+
+section.facility .video {
+  width: 684px;
+}
+
+section.facility .video img {
+  width: 100%;
 }
