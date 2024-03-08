@@ -172,3 +172,16 @@ section.material .list a {
   font-weight: 500;
   text-decoration: none;
 }
+
+section.material .list .row .col:hover {
+  background-color: var(--secondary) !important;
+}
+
+section.material .list .row .col:hover h4 {
+  color: #fff;
+}
+
+section.material .list .row .col:hover a {
+  color: #fff !important;
+  text-decoration: underline;
+}
