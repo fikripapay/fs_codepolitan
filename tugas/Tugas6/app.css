@@ -2,7 +2,8 @@
   --primary: #ffa500;
   --secondary: #1c2024;
   --light: #fff1d9;
-  --grey: #23262a;
+  --dark: #23262a;
+  --grey: #878787;
 
   --montagu: "Montagu Slab", serif;
 }
@@ -73,7 +74,7 @@ section.hero span.reality::before {
 }
 
 section.hero p {
-  color: #878787;
+  color: var(--grey);
 }
 
 /* stat section */
@@ -124,4 +125,50 @@ section.facility .video {
 
 section.facility .video img {
   width: 100%;
+}
+
+/* material section */
+section.material .title h3 {
+  font-family: var(--montagu);
+  font-size: 36px;
+}
+
+section.material .title span {
+  position: relative;
+  z-index: 1;
+}
+
+section.material .title span::before {
+  content: "";
+  position: absolute;
+  bottom: 7px;
+  height: 10px;
+  width: 100%;
+  background-color: var(--primary);
+  z-index: -1;
+}
+
+section.material .title p {
+  color: var(--grey);
+}
+
+section.material .list h4 {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+section.material .list span {
+  font-size: 20px;
+  font-weight: 700;
+  padding: 3px 13px;
+  background-color: var(--primary);
+}
+
+section.material .list p {
+  color: var(--grey);
+}
+
+section.material .list a {
+  font-weight: 500;
+  text-decoration: none;
 }
