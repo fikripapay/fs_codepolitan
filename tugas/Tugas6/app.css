@@ -1,7 +1,6 @@
 :root {
   --primary: #ffa500;
   --secondary: #1c2024;
-  --light: #fff1d9;
   --dark: #23262a;
   --grey: #878787;
 
@@ -16,27 +15,23 @@ body {
   background-color: var(--primary);
 }
 
-.bg-light {
-  background-color: var(--light);
-}
-
 /* button*/
-#btn-dark {
+.my-btn-dark {
   font-weight: 600;
   background-color: var(--secondary);
 }
 
-#btn-light {
+.my-btn-light {
   font-weight: 600;
   background-color: inherit;
 }
 
-#btn-dark:hover {
+.my-btn-dark:hover {
   background-color: var(--primary) !important;
   color: var(--secondary) !important;
 }
 
-#btn-light:hover {
+.my-btn-light:hover {
   color: var(--primary);
   background-color: inherit;
 }
@@ -188,7 +183,6 @@ section.comparison {
   h3 {
     font-size: 36px;
     font-family: var(--montagu);
-
     span {
       color: var(--primary);
     }
@@ -210,11 +204,9 @@ section.comparison .list-comparison {
 
     .col-4 {
       background-color: rgba(95, 95, 95, 0.1);
-
       h4 {
         font-weight: 700;
       }
-
       img {
         justify-self: center;
       }
@@ -260,15 +252,14 @@ section.mentor {
 
 section.mentor .list-mentor {
   width: 100%;
+  scrollbar-width: none;
 
   .list {
     width: 273px;
-
     h4 {
       font-size: 20px;
       font-weight: 700;
     }
-
     h5 {
       font-size: 16px;
       font-weight: 500;
@@ -276,9 +267,44 @@ section.mentor .list-mentor {
   }
 }
 
+section.mentor .list-mentor::-webkit-scrollbar {
+  display: none;
+}
+
 section.mentor .next-prev-btn {
   .prev,
   .next {
     cursor: pointer;
+  }
+}
+
+/* faq section */
+section.faq {
+  h3 {
+    font-family: var(--montagu);
+    font-size: 36px;
+
+    span {
+      position: relative;
+      z-index: 1;
+    }
+
+    span::before {
+      content: "";
+      position: absolute;
+      bottom: 7px;
+      height: 12px;
+      width: 100%;
+      background-color: var(--primary);
+      z-index: -1;
+    }
+  }
+
+  p {
+    color: rgba(135, 135, 135, 1);
+  }
+
+  p.mt-5 {
+    font-weight: 600;
   }
 }
