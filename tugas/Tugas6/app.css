@@ -188,6 +188,7 @@ section.comparison {
   h3 {
     font-size: 36px;
     font-family: var(--montagu);
+
     span {
       color: var(--primary);
     }
@@ -209,9 +210,11 @@ section.comparison .list-comparison {
 
     .col-4 {
       background-color: rgba(95, 95, 95, 0.1);
+
       h4 {
         font-weight: 700;
       }
+
       img {
         justify-self: center;
       }
@@ -225,5 +228,57 @@ section.comparison .list-comparison {
     p {
       text-align: left;
     }
+  }
+}
+
+/* mentor section */
+section.mentor {
+  h3 {
+    font-family: var(--montagu);
+    font-size: 36px;
+  }
+
+  span.expert {
+    position: relative;
+    z-index: 1;
+  }
+
+  span.expert::before {
+    content: "";
+    position: absolute;
+    bottom: 7px;
+    height: 12px;
+    width: 100%;
+    background-color: var(--primary);
+    z-index: -1;
+  }
+
+  p {
+    color: rgba(135, 135, 135, 1);
+  }
+}
+
+section.mentor .list-mentor {
+  width: 100%;
+
+  .list {
+    width: 273px;
+
+    h4 {
+      font-size: 20px;
+      font-weight: 700;
+    }
+
+    h5 {
+      font-size: 16px;
+      font-weight: 500;
+    }
+  }
+}
+
+section.mentor .next-prev-btn {
+  .prev,
+  .next {
+    cursor: pointer;
   }
 }
