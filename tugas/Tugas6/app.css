@@ -12,10 +12,6 @@ body {
   font-family: "Plus Jakarta Sans", sans-serif;
 }
 
-.bg-secondary {
-  background-color: var(--secondary) !important;
-}
-
 .bg-yellow {
   background-color: var(--primary);
 }
@@ -184,4 +180,50 @@ section.material .list .row .col:hover h4 {
 section.material .list .row .col:hover a {
   color: #fff !important;
   text-decoration: underline;
+}
+
+/* comparison section */
+section.comparison {
+  background-color: var(--secondary);
+  h3 {
+    font-size: 36px;
+    font-family: var(--montagu);
+    span {
+      color: var(--primary);
+    }
+  }
+}
+
+section.comparison .list-comparison {
+  .row {
+    .col-3,
+    .col-4 {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(7, 1fr);
+    }
+
+    .col-3 p {
+      font-weight: 700;
+    }
+
+    .col-4 {
+      background-color: rgba(95, 95, 95, 0.1);
+      h4 {
+        font-weight: 700;
+      }
+      img {
+        justify-self: center;
+      }
+    }
+
+    .col-4:last-child {
+      border: 4px solid rgba(255, 165, 0, 1);
+      box-shadow: 0 0 20px 0px rgba(255, 165, 0, 1);
+    }
+
+    p {
+      text-align: left;
+    }
+  }
 }
