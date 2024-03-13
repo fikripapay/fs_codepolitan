@@ -308,3 +308,90 @@ section.faq {
     font-weight: 600;
   }
 }
+
+/* pricing section */
+section.pricing {
+  h3 {
+    font-family: var(--montagu);
+    font-size: 36px;
+
+    span {
+      position: relative;
+      z-index: 1;
+    }
+
+    span::before {
+      content: "";
+      position: absolute;
+      bottom: 7px;
+      height: 12px;
+      width: 100%;
+      background-color: var(--primary);
+      z-index: -1;
+    }
+  }
+
+  p {
+    color: rgba(135, 135, 135, 1);
+  }
+}
+
+/* pricing section */
+section.pricing .row {
+  position: relative;
+
+  .col-5 {
+    background-color: var(--secondary);
+  }
+
+  .col-5:first-child {
+    div.mt-4 {
+      span:first-child {
+        font-size: 24px;
+        color: rgba(214, 37, 37, 1);
+      }
+
+      span:last-child {
+        font-size: 40px;
+        font-weight: 800;
+      }
+    }
+
+    .checklist {
+      display: flex;
+      align-items: center;
+    }
+
+    .checklist i {
+      font-size: 1.5rem;
+      color: var(--primary);
+    }
+  }
+
+  .col-5:last-child {
+    h4 {
+      font-size: 20px;
+      font-weight: 700;
+    }
+
+    span {
+      font-weight: 500;
+    }
+  }
+}
+
+section.pricing .row::before {
+  content: "VS";
+  width: 131px;
+  height: 131px;
+  text-align: center;
+  line-height: 131px;
+  font-size: 50px;
+  font-weight: 700;
+  color: var(--secondary);
+  border-radius: 50%;
+  background-color: var(--primary);
+  top: 50%;
+  transform: translateY(-50%);
+  position: absolute;
+}
