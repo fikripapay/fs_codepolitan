@@ -336,7 +336,6 @@ section.pricing {
   }
 }
 
-/* pricing section */
 section.pricing .row {
   position: relative;
 
@@ -394,4 +393,60 @@ section.pricing .row::before {
   top: 50%;
   transform: translateY(-50%);
   position: absolute;
+}
+
+section.pricing .promo {
+  background-color: #fff1d9;
+  border: 4px solid var(--primary);
+
+  h4 {
+    font-family: var(--montagu);
+    font-size: 36px;
+    font-weight: 600;
+  }
+
+  p {
+    font-size: 20px;
+    color: #000;
+  }
+
+  span {
+    display: block;
+    font-size: 64px;
+    font-weight: 800;
+  }
+}
+
+/* footer */
+footer {
+  background-color: var(--secondary);
+  color: #fff;
+}
+
+footer .left .links {
+  font-size: 20px;
+
+  a {
+    color: #fff;
+  }
+}
+
+footer .right {
+  h5 {
+    font-size: 20px;
+    font-weight: 700;
+  }
+
+  a {
+    display: block;
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 400;
+    margin-top: 10px;
+  }
+
+  a:hover {
+    color: var(--primary);
+  }
 }
